@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "clientes")
-public class cadastromodel {
+public class CadastroModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

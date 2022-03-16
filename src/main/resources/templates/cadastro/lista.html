@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar dados</title>
+</head>
+<body>
+    <tbody>
+        <tr th:each="cadastroModel : ${clientes}">
+            <td th:text="${cadastroModel.id}"></td>
+            <td th:text="${cadastroModel.name}"></td>
+            <td th:text="${cadastroModel.email}"></td>
+            <td th:text="${cadastroModel.senha}"></td>
+            <td><a th:href="@{'/clientes/' + ${cadastroModel.id}}" class="btn btn-warning">Alterar</td>
+            <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/clientes/{id}(id=${cadastroModel.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td>
+        </tr>
+    </tbody>
+</body>
+</html>

@@ -98,3 +98,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
+
+.juntar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

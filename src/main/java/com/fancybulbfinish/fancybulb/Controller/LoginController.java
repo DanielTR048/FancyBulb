@@ -16,6 +16,12 @@ public class LoginController {
     @Autowired
     private fancybulbrepo repo;
 
+    @GetMapping("/Login-index")
+    public String loginCliente(){
+
+        return "login/Cliente-login";
+    }
+
     @GetMapping("/Login-page")
     public String login(){
 
@@ -26,9 +32,10 @@ public class LoginController {
     public String logar(Model model, CadastroModel cad){
         CadastroModel cada = this.repo.Login(cad.getEmail(), cad.getSenha());
         if (cada != null){
-            return "redirect:/pos";
-        }
+            return "redirect:/Lista-cadastro";
+        } 
         model.addAttribute("erro", "Usuario ou senha invalidos");
         return "login/Login";
     }
+
 }

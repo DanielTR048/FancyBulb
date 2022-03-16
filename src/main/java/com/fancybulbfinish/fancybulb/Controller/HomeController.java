@@ -3,6 +3,7 @@ package com.fancybulbfinish.fancybulb.Controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 @Controller
 public class HomeController {
     
@@ -12,13 +13,6 @@ public class HomeController {
 
 
         return "home/index";
-    }
-
-    @GetMapping("/pos")
-    public String indexpos(){
-
-
-        return "login/indexpos";
     }
 
     @GetMapping("Produtos-page")

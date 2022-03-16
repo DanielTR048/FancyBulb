@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="/_css/lista.css">
     <title>Mostrar dados</title>
 </head>
+<header>
+    <a class="navegacao-menu-item" href="/"> <img src="_imagens/botao-home.png" width="50px" alt=""> </a>
+</header>
+
 <body>
-    <tbody>
-        <tr th:each="cadastroModel : ${clientes}">
-            <td th:text="${cadastroModel.id}"></td>
-            <td th:text="${cadastroModel.name}"></td>
-            <td th:text="${cadastroModel.email}"></td>
-            <td th:text="${cadastroModel.senha}"></td>
-            <td><a th:href="@{'/clientes/' + ${cadastroModel.id}}" class="btn btn-warning">Alterar</td>
-            <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/clientes/{id}(id=${cadastroModel.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td>
-        </tr>
-    </tbody>
+    <center>
+        <table class="container">
+            <tr>
+                <th style="padding-left: 20px;">Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>Alterar</th>
+                <th>Excluir</th>
+            </tr>
+            <tbody>
+                <tr th:each="cadastroModel : ${clientes}">
+                    <td style="padding-left: 20px;" th:text="${cadastroModel.id}"></td>
+                    <td th:text="${cadastroModel.name}"></td>
+                    <td th:text="${cadastroModel.email}"></td>
+                    <td th:text="${cadastroModel.senha}"></td>
+                    <td><a style="border-top: 10px;" th:href="@{'/clientes/' + ${cadastroModel.id}}" class="btn btn-warning">Alterar</td>
+                    <td><a href="#"
+                            th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/clientes/{id}(id=${cadastroModel.id})} + '/excluir\' } '"
+                            class="btn btn-danger">Excluir</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
 </body>
+
 </html>

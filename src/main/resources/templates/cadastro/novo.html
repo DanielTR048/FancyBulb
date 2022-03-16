@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="content-language" content="pt-br">
 
-    <link rel="stylesheet" href="_css/formulario_cadastro.css">
+    <link rel="stylesheet" href="/_css/formulario_cadastro.css">
 
     <!-- Frameworks Jquey CSS-->
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css " rel="stylesheet">
@@ -23,15 +23,15 @@
 
     <!-- Código feito em JS para validar com Regex , JSON e JS normal -->
 
-    <script src="_javascript/validar.js"></script>
+    <script src="/_javascript/validar.js"></script>
 
     <!--Valida CPF-->
 
-    <script src="_javascript/cpfbusca.js"></script>
+    <script src="/_javascript/cpfbusca.js"></script>
 
     <!-- Código feito em JS para validar com Jquey e efeito Accordeon -->
 
-    <script src="_javascript/jquery_funcao.js"></script>
+    <script src="/_javascript/jquery_funcao.js"></script>
     <!--Construção do efeito ACCORDION (ACORDEON) do JQUERY UI-->
 
 
@@ -40,7 +40,7 @@
 
 <body>
     <a class="navegacao-menu-item" href="/"> <img src="_imagens/botao-home.png" width="50px" alt=""> </a>
-    <form method="GET" name="form" id="form">
+    <form method="POST" action="/cadastrar" onsubmit="validar_tudo()">
         <div class="form">
             <table>
                 <tr>
@@ -48,25 +48,25 @@
                 </tr>
                 <tr>
                     <td><label for="nome">Nome:</label></td>
-                    <td><input type="text" placeholder="Digite seu nome completo" name="nome" id="nome"
+                    <td><input type="text" required placeholder="Digite seu nome completo" name="name" id="name"
                     autocomplete="off"></td>
                 </tr>
 
                 <tr>
                     <td><label for="email">Email:</td>
-                    <td> <input name="email"  placeholder="Digite o seu Email" type="text" id="email"
+                    <td> <input name="email" required  placeholder="Digite o seu Email" type="text" id="email"
                     class="email"></label><br /></td>
                 </tr>
 
                 <tr>
                     <td><label for="senha">senha:</label></td>
-                    <td><input type="password" name="senha" id="password" placeholder="Digite a sua senha" autocomplete="off"
+                    <td><input type="password" name="senha" required id="password" placeholder="Digite a sua senha" autocomplete="off"
                      class="senha"></td>
                 </tr>
 
-                </tr>
 
-                <tr>
+
+<!--                 <tr>
                     <td><label for="cpf">CPF/CNPJ:</label></td>
                     <td><input type="text" name="cpf" placeholder="000.000.000-00" id="cpf" autocomplete="off"
                             class="mask-cpf"></td>
@@ -78,10 +78,10 @@
                     <td><label for="tel">Celular:</label></td>
                     <td><input type="text" name="cel" id="cel" placeholder="(00)00000-0000" autocomplete="off"
                             class="celular"></td>
-                </tr>
+                </tr> -->
 
                 <tr>
-                    <td colspan="2"> <button type="submit">Enviar cadastro</button></td>
+                    <td colspan="2"> <button>Enviar cadastro</button></td>
                 </tr>
             </table>
     </form>

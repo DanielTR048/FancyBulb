@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="pt-br">
+
+    <link rel="stylesheet" href="_css/formulario_cadastro.css">
+
+    <!-- Frameworks Jquey CSS-->
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css " rel="stylesheet">
+    <!-- Frameworks Jquey JS -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!-- Frameworks Jquey Para Mascara de Entrada de DADOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
+    <!-- Frameworks Jquey Para Validação -->
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+
+    <!-- Código feito em JS para validar com Regex , JSON e JS normal -->
+
+    <script src="_javascript/validar.js"></script>
+
+    <!--Valida CPF-->
+
+    <script src="_javascript/cpfbusca.js"></script>
+
+    <!-- Código feito em JS para validar com Jquey e efeito Accordeon -->
+
+    <script src="_javascript/jquery_funcao.js"></script>
+    <!--Construção do efeito ACCORDION (ACORDEON) do JQUERY UI-->
+
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <a class="navegacao-menu-item" href="/"> <img src="_imagens/botao-home.png" width="50px" alt=""> </a>
+    <form method="GET" name="form" id="form">
+        <div class="form">
+            <table>
+                <tr>
+                    <th>Cadastro Fancy bulb</th>
+                </tr>
+                <tr>
+                    <td><label for="nome">Nome:</label></td>
+                    <td><input type="text" placeholder="Digite seu nome completo" name="nome" id="nome"
+                    autocomplete="off"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</td>
+                    <td> <input name="email"  placeholder="Digite o seu Email" type="text" id="email"
+                    class="email"></label><br /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="senha">senha:</label></td>
+                    <td><input type="password" name="senha" id="password" placeholder="Digite a sua senha" autocomplete="off"
+                     class="senha"></td>
+                </tr>
+
+                </tr>
+
+                <tr>
+                    <td><label for="cpf">CPF/CNPJ:</label></td>
+                    <td><input type="text" name="cpf" placeholder="000.000.000-00" id="cpf" autocomplete="off"
+                            class="mask-cpf"></td>
+                </tr>
+
+
+
+                <tr>
+                    <td><label for="tel">Celular:</label></td>
+                    <td><input type="text" name="cel" id="cel" placeholder="(00)00000-0000" autocomplete="off"
+                            class="celular"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"> <button type="submit">Enviar cadastro</button></td>
+                </tr>
+            </table>
+    </form>
+    </div>
+</body>
+
+</html>

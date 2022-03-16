@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_css/formulario_login.css">
+    <script src="_javascript/funcionamento.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <a class="navegacao-menu-item" href="/"> <img src="_imagens/botao-home.png" width="50px" alt=""> </a>
+    <div class="login-page">
+        <div class="form">
+          <form class="login-form" action="/logar" method="post">
+            <input type="text" placeholder="Email"/>
+            <input type="password" placeholder="Senha"/>
+            <div th:if="${erro != null}" th:text="${erro}" class="alert alert-danger" role="alert">
+            </div>
+            <button  type="button" onclick="window.location.href = 'Index.html'"> login </button>
+            <p class="message">Nao esta registrado? <a href="/cadastroCliente">Crie sua conta</a></p>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

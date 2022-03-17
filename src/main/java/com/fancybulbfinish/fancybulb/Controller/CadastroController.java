@@ -1,6 +1,7 @@
 package com.fancybulbfinish.fancybulb.Controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.fancybulbfinish.fancybulb.Model.CadastroModel;
 import com.fancybulbfinish.fancybulb.Repository.fancybulbrepo;
@@ -34,6 +35,27 @@ public class CadastroController {
     @GetMapping("/clientes/{id}/excluir")
     public String excluir(@PathVariable int id){
         repo.deleteById(id);
+        return "redirect:/Lista-cadastro";
+    }
+
+    @GetMapping("/clientes/{id}")
+    public String busca(@PathVariable int id, Model model){
+        Optional<CadastroModel> cad = repo.findById(id);
+        try {
+        model.addAttribute("clientes", cad.get());
+        }
+        catch(Exception err) { 
+            return "redirect:/Lista-cadastro";
+        }
+        return "cadastro/editar";
+    }
+
+    @PostMapping("/clientes/{id}/atualizar")
+    public String atualizar(@PathVariable int id, CadastroModel cadastroModel){
+        if(!repo.existsById(id)){
+            return "redirect:/Lista-cadastro";  
+        }
+        repo.save(cadastroModel);
         return "redirect:/Lista-cadastro";
     }
 

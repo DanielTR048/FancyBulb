@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <title>Editar</title>
+</head>
+<body>
+    
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Edição de clientes</h1>
+    <p class="mb-4">
+        Editar Cliente
+    </p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4" style="padding: 30px;">
+        <form th:each="cadastroModel : ${clientes}" method="POST" th:action="@{'/clientes/' + ${cadastroModel?.id} + '/atualizar'}">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" th:value="${cadastroModel?.name}" required id="nome" name="name" placeholder="Digite o seu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" th:value="${cadastroModel?.email}" required id="email" name="email" placeholder="Digite o seu email">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" th:value="${cadastroModel?.senha}" required id="senha" name="senha" placeholder="Digite o seu senha">
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
+
+
+

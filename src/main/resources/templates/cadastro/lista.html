@@ -8,17 +8,22 @@
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/_css/estilo.css">
     <link rel="stylesheet" type="text/css" href="/_css/lista.css">
-    <title>Mostrar dados</title>
+
+    <title>💡Mostrar dados💡</title>
 </head>
 <header>
     <a class="navegacao-menu-item" href="/"> <img src="_imagens/botao-home.png" width="50px" alt=""> </a>
+
+    <a href="/exit"style="padding-left: 40px;" class="navegacao-menu-item"> <img
+        src="/_imagens/logout.png" width="50px" alt=""></a>
+
 </header>
 
 <body>
     <center>
         <table class="container">
             <tr>
-                <th style="padding-left: 20px;">Id</th>
+                <th>Id</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Senha</th>
@@ -27,7 +32,7 @@
             </tr>
             <tbody>
                 <tr th:each="cadastroModel : ${clientes}">
-                    <td style="padding-left: 20px;" th:text="${cadastroModel.id}"></td>
+                    <td th:text="${cadastroModel.id}"></td>
                     <td th:text="${cadastroModel.name}"></td>
                     <td th:text="${cadastroModel.email}"></td>
                     <td th:text="${cadastroModel.senha}"></td>

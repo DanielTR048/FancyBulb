@@ -7,10 +7,63 @@
   text-decoration: none;
 }
 
-body {
-  font-size: 100%;
-  background: linear-gradient(118.05deg, #2CC4CE 28.96%, rgba(235, 255, 0, 0.6) 89.91%);
+
+:root{
+  --bg: linear-gradient(118.05deg, #2CC4CE 28.96%, rgba(235, 255, 0, 0.6) 89.91%);
+  --bg-panel: #faf72e;
+  --color-headings: #0077FF;
+  --color-text: #333333;
 }
+
+.corpo-pagina {
+  font-size: 100%;
+  background: var(--bg);
+  
+}
+
+
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background-color: var(--color-headings);
+}
+
+input:checked + label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
 
 .navegacao-imagem-esquerda {
   width: auto;
@@ -43,7 +96,6 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 gap: 40px;
-
 }
 
 .navegacao-menu {
@@ -57,6 +109,34 @@ gap: 40px;
   color: black;
   font-weight: 600;
   font-size: 18px ;
+}
+
+.navegacao-menu-item-cliente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: underline black;
+}
+
+.navegacao-menu-item-nome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: underline black;
+}
+
+.nome-menu-item {
+  font-family: 'Courier Prime', monospace;
+  color: black;
+  font-weight: 700;
+  font-size: 15px ;
+}
+
+.Nome-cliente {
+  font-family: 'Courier Prime', monospace;
+  color: black;
+  font-weight: 700;
+  font-size: 15px ;
 }
 
 .conteudo-pagina {
@@ -91,6 +171,47 @@ font-weight: 500;
   color: black;
   font-weight: 700;
   font-size: 25px ;
+}
+
+.texto-titulo-acima {
+  font-family: 'Courier Prime', monospace;
+  color: black;
+  font-weight: 600;
+  font-size: 40px ;
+  align-items: center;
+  -webkit-text-stroke: 0.001px rgb(102, 102, 1);
+
+  
+
+}
+.animation-lamp {
+  animation: lightsOn 2.5s alternate infinite ease-in-out;
+  background-image: url(/_imagens/lamp.png);
+  background-position: 50%;
+  border-radius: 20px;
+
+}
+
+
+@keyframes lightsOn {
+
+  from {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 1.8;
+  }
+
+}
+
+
+
+
+.conteudo-cima-nome {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
 .texto-item {
@@ -144,16 +265,8 @@ align-self: flex-end;
   font-family: 'Roboto Serif', sans-serif;
 }
 
-div[class*=box] {
-	height: 33.33%;
-	width: 45%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
 
-.box-1 { background-color: #000000; }
+
 
 .bt {
 	line-height: 50px;
@@ -221,6 +334,11 @@ figure {
 
 }
 
+.mecher {
+  transform: translateX();
+  animation: floatlado 5s ease-in-out infinite;
+}
+
 @keyframes float {
   0%{
     transform: translateY(0px);
@@ -230,6 +348,19 @@ figure {
   }
   100%{
     transform: translateY(0px);
+  }
+  
+}
+
+@keyframes floatlado {
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(-30px);
+  }
+  100%{
+    transform: translateX(0px);
   }
   
 }

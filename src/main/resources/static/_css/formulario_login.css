@@ -5,7 +5,11 @@
   padding: 8% 0 0;
   margin: auto;
 }
+
+
+
 .form {
+  display: flex;
   position: relative;
   z-index: 1;
   background: #FFFFFF;

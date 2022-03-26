@@ -20,25 +20,31 @@
     <header class="topo-pagina">
 
         <section class="logo-acima">
-            <center><a href=""><img  src="_imagens/Fancy bulb Titulo.png" alt="FancyBulb"></a></center>
+            <center><a href=""><img  src="_imagens/Fancy bulb Titulo.png" alt="Logo escrito FancyBulb com um gradient em vermelho e roxo"></a></center>
         </section>
 
         <section class="navegacao">
-        <!-- Lampada -->
-        <nav class="navegacao-menu">
-            <a class="navegacao-menu-item" href="/"> <img src="_imagens/botao-home.png" width="50px" alt=""> </a>
-            <a class="navegacao-menu-item" href="/Produtos-page"> <img src="_imagens/novo-produto.png" width="50px" alt=""></a>
-            <form class="d-flex">
-                <input class="form-control me-2 bg-gradient" style="opacity: 60%;" type="search" placeholder="Pesquise aqui" aria-label="Search">
-                <button class="btn btn-success" type="submit"><img src="_imagens/lupas.png" alt=""></button>
-              </form>
-            <a class="navegacao-menu-item" href="/Sobre-page"> <img src="_imagens/sobre.png" width="50px" alt=""></a>
-            <a class="navegacao-menu-item" href="/cadastroCliente"> <img src="_imagens/cadastro.png" width="50px" alt=""></a>
-            <a class="navegacao-menu-item" href="/Login-page"> <img src="_imagens/login.png" width="50px" alt=""></a>
-        </nav>
-        <!-- Carrinho -->
-        <a><img class="navegacao-imagem-carrinho" src="_imagens/carrinho.ico" alt="Error$)$"></a>
-        </section>
+            <!-- Lampada -->
+            <nav class="navegacao-menu">
+                <a class="navegacao-menu-item" href="/"> <img src="/_imagens/botao-home.png" width="50px" alt="Uma casa simbolizando o menu inicial"> </a>
+                <a class="navegacao-menu-item" href="/Produtos-page"> <img src="/_imagens/novo-produto.png" alt="Uma caixa simbolizando produtos"></a>
+                <form class="d-flex">
+                    <input class="form-control me-2 bg-gradient" style="opacity: 60%;" type="search" placeholder="Pesquise aqui" aria-label="Search">
+                    <button class="btn btn-success" type="submit"><img src="/_imagens/lupas.png" alt="Uma lupa para pesquisar"></button>
+                  </form>
+                <a class="navegacao-menu-item" href="/Sobre-page"> <img src="/_imagens/sobre.png" width="50px" alt="um simbolo redondo com um i no meio simbolizando uma pagina de Informações"></a>
+    
+                <a class="navegacao-menu-item-nome" href="/Cadastro-cliente"> <img src="/_imagens/cadastro.png" alt="Uma pagina como um curriculo"></a>
+                
+                
+                <a class="navegacao-menu-item-cliente" href="/Login-page"> <img src="/_imagens/login.png" width="50px" alt="Uma mini pagina de login com os campos login e senha"> <span class="Nome-cliente" th:text="${NomeCliente}"></span> </a>
+    
+    
+            </nav>
+            <!-- Carrinho -->
+            <a><img class="navegacao-imagem-carrinho" src="_imagens/carrinho.ico" alt="Carrinho de compras"></a>
+            </section>
+    
 
     </header>
 
@@ -62,22 +68,22 @@
     </tr>
 
     <tr class="rodape-linha2">
-        <td class="rodape-linha-item"><a href="https://www.facebook.com/profile.php?id=100078793120758"><img src="_imagens/facebook.png" width="50px" alt=""></a> Facebook</td>
-        <td class="rodape-linha-item"><a href=""><img src="_imagens/cartao-de-credito.png" width="50px" alt=""></a> Cartao Nacional</td>
+        <td class="rodape-linha-item"><a href="https://www.facebook.com/profile.php?id=100078793120758"><img src="_imagens/facebook.png" width="50px" alt="Logo do facebook"></a> Facebook</td>
+        <td class="rodape-linha-item"><a href=""><img src="_imagens/cartao-de-credito.png" width="50px" alt="dois cartoes de credito"></a> Cartao Nacional</td>
         <td class="rodape-linha-item"><a href=""> Contato RH </a> </td>
         <td class="rodape-linha-item"><a href=""> Comunidade </a></td>
     </tr>
 
     <tr class="rodape-linha3">
-        <td class="rodape-linha-item"><a href="https://www.instagram.com/fancybulb098/"><img src="_imagens/instagram.png" width="50px" alt=""></a> Instragram</td>
-        <td class="rodape-linha-item"><a href=""><img src="_imagens/fatura.png" width="50px" alt=""></a> Boleto</td>
+        <td class="rodape-linha-item"><a href="https://www.instagram.com/fancybulb098/"><img src="_imagens/instagram.png" width="50px" alt="Logo do instagram"></a> Instragram</td>
+        <td class="rodape-linha-item"><a href=""><img src="_imagens/fatura.png" width="50px" alt="Pagina com Informações como se fosse um boleto"></a> Boleto</td>
         <td class="rodape-linha-item"><a href=""> Faça parte da equipe </a></td>
         <td class="rodape-linha-item"><a href=""> Informações </a></td>
     </tr>
 
     <tr class="rodape-linha4">
-        <td class="rodape-linha-item"><a href="https://twitter.com/BulbFancy"><img src="_imagens/twitter.png" width="50px" alt=""></a> Twitter</td>
-        <td class="rodape-linha-item"><a href=""><img src="_imagens/logo-pix-icone-256.png" width="50px" alt=""></a> Pix</td>
+        <td class="rodape-linha-item"><a href="https://twitter.com/BulbFancy"><img src="_imagens/twitter.png" width="50px" alt="Logo do twitter"></a> Twitter</td>
+        <td class="rodape-linha-item"><a href=""><img src="_imagens/logo-pix-icone-256.png" width="50px" alt="Logo do pix"></a> Pix</td>
         <td class="rodape-linha-item"><a href=""> Anuncie Aqui </a></td>
         <td class="rodape-linha-item"><a href=""> Sobre nós </a></td>
     </tr>
@@ -85,8 +91,8 @@
 </section>
 
 <section class="rodape-baixo">
-    <!--Logo-->
-    <img src="" alt="">
+    <td class="rodape-linha-item"><a href="/Login-Admin">  <img class="mecher" src="_imagens/envio.png" width="50px" alt="Botao redondo com uma seta para cima e um traço embaixo no centro"> </a></td>
+   
 </section>
     </footer>
 
